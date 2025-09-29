@@ -29,8 +29,15 @@ const Profile = () => {
       <div className="profile-card">
         <div><strong>Name:</strong> {profile.name}</div>
         <div><strong>Email:</strong> {profile.email}</div>
-        <div><strong>Account ID:</strong> {profile._id}</div>
-        <div><strong>Joined:</strong> {new Date(profile.joined).toLocaleDateString()}</div>
+  <div><strong>Account ID:</strong> {profile.accountId || profile._id}</div>
+        <div><strong>Joined:</strong> {
+          (() => {
+            const dateStr = profile.joined || profile.joinDate || profile.createdAt || profile.updatedAt;
+            if (!dateStr) return 'N/A';
+            const date = new Date(dateStr);
+            return !isNaN(date.getTime()) ? date.toLocaleDateString() : 'N/A';
+          })()
+        }</div>
         <div><strong>Risk Level:</strong> {profile.riskLevel}</div>
         {/* Aur bhi fields apne design ke hisaab se add karen */}
       </div>

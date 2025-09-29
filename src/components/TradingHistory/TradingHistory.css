@@ -2,43 +2,67 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  background: #14281e !important;
+  color: #fff !important;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(44, 204, 64, 0.10);
 }
 
 .trades-table {
-  background: white;
+  background: #1e3a2a !important;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(44, 204, 64, 0.10);
   margin-top: 20px;
+  color: #fff !important;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  background: transparent !important;
+  color: #fff !important;
 }
 
 th, td {
   padding: 12px;
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #2ecc40;
+  background: transparent !important;
+  color: #fff !important;
 }
 
 th {
-  background: #f8f9fa;
+  background: #14281e !important;
   font-weight: 600;
-  color: #666;
+  color: #fff !important;
 }
 
 tr:hover {
-  background: #f8f9fa;
+  background: #1e3a2a !important;
 }
 
 .profit {
-  color: #28a745;
+  color: #2ecc40 !important;
   font-weight: 500;
 }
 
 .loss {
-  color: #dc3545;
+  color: #dc3545 !important;
   font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .trading-history-container, .trades-table {
+    padding: 8px 4px !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    font-size: 0.97rem !important;
+    gap: 8px !important;
+    border-radius: 10px !important;
+  }
+  table, th, td {
+    font-size: 0.95rem !important;
+    padding: 6px !important;
+  }
 }

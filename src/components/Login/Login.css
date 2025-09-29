@@ -7,7 +7,7 @@
 }
 
 .login-box {
-  background: white;
+  background: #14281e !important;
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -17,7 +17,7 @@
 
 .login-box h2 {
   text-align: center;
-  color: #2c7be5;
+  color: #2ecc40;
   margin-bottom: 1.5rem;
 }
 
@@ -32,7 +32,7 @@ input {
 button {
   width: 100%;
   padding: 10px;
-  background: #2c7be5;
+  background: #2ecc40;
   color: white;
   border: none;
   border-radius: 5px;
@@ -41,5 +41,5 @@ button {
 }
 
 button:hover {
-  background: #1a5cb8;
+  background: #27ae60;
 }

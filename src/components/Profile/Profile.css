@@ -3,28 +3,33 @@
   flex-direction: column;
   align-items: center;
   margin-top: 40px;
+  background: #14281e;
+  min-height: 100vh;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(44, 204, 64, 0.10);
 }
 
 .profile-card {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
-  padding: 32px 40px;
+  background: #1e3a2a !important;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44, 204, 64, 0.10), 0 1.5px 4px rgba(44, 204, 64, 0.08);
+  padding: 36px 44px;
   min-width: 320px;
-  max-width: 400px;
+  max-width: 420px;
   margin-top: 24px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  font-size: 1.08rem;
-  color: #222;
+  gap: 22px;
+  font-size: 1.12rem;
+  color: #fff;
 }
 
 .profile-card div {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 8px;
+  border-bottom: 1px solid #2ecc40;
+  padding-bottom: 10px;
+  color: #fff;
 }
 
 .profile-card div:last-child {
@@ -32,13 +37,30 @@
 }
 
 .profile-card strong {
-  color: #007bff;
+  color: #2ecc40;
   min-width: 110px;
+  font-weight: 600;
 }
 
 h2 {
-  color: #007bff;
+  color: #2ecc40;
   font-weight: 700;
   letter-spacing: 1px;
   margin-bottom: 0;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+}
+
+@media (max-width: 700px) {
+  .profile-card {
+    padding: 8px 4px !important;
+    min-width: 0 !important;
+    max-width: 100vw !important;
+    font-size: 0.97rem !important;
+    gap: 8px !important;
+  }
+  .profile-container {
+    margin-top: 8px !important;
+    padding: 4px !important;
+    border-radius: 10px !important;
+  }
 }

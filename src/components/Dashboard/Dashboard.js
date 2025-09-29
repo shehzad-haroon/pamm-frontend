@@ -90,8 +90,8 @@ const Dashboard = () => {
       </div>
 
       {/* Market Dashboard Section */}
-      <section style={{marginTop: 40}}>
-        <h2 style={{textAlign: 'center', color: '#007bff'}}>Live Market Dashboard</h2>
+      <section className="live-market-section">
+        <h2 className="live-market-title">Live Market Dashboard</h2>
         <DashboardWithWidgets />
       </section>
     </div>

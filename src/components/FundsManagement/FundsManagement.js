@@ -4,8 +4,8 @@ import API_URL from '../../api';
 import './FundsManagement.css';
 
 const FundsManagement = () => {
-  const [deposit, setDeposit] = useState({ name: '', email: '', amount: '', paymentMethod: '' });
-  const [withdraw, setWithdraw] = useState({ name: '', email: '', amount: '', paymentMethod: '' });
+  const [deposit, setDeposit] = useState({ name: '', email: '', amount: '', paymentMethod: '', accountNumber: '' });
+  const [withdraw, setWithdraw] = useState({ name: '', email: '', amount: '', paymentMethod: '', accountNumber: '' });
   const [message, setMessage] = useState('');
 
   const handleDeposit = async (e) => {
@@ -57,6 +57,13 @@ const FundsManagement = () => {
           required
         />
         <input
+          type="text"
+          placeholder="Account Number"
+          value={deposit.accountNumber}
+          onChange={e => setDeposit({ ...deposit, accountNumber: e.target.value })}
+          required
+        />
+        <input
           type="number"
           placeholder="Amount"
           value={deposit.amount}
@@ -87,6 +94,13 @@ const FundsManagement = () => {
           placeholder="Email"
           value={withdraw.email}
           onChange={e => setWithdraw({ ...withdraw, email: e.target.value })}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Account Number"
+          value={withdraw.accountNumber}
+          onChange={e => setWithdraw({ ...withdraw, accountNumber: e.target.value })}
           required
         />
         <input

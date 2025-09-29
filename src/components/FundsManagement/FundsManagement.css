@@ -1,7 +1,7 @@
 .funds-management {
   max-width: 400px;
   margin: 0 auto;
-  background: white;
+  background: #14281e !important;
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -9,7 +9,7 @@
 
 .funds-management h2 {
   margin-top: 20px;
-  color: #2c7be5;
+  color: #2ecc40;
 }
 
 .funds-management form {
@@ -27,7 +27,7 @@
 
 .funds-management button {
   padding: 10px;
-  background: #2c7be5;
+  background: #2ecc40;
   color: white;
   border: none;
   border-radius: 5px;
@@ -35,7 +35,7 @@
 }
 
 .funds-management button:hover {
-  background: #1a5cb8;
+  background: #27ae60;
 }
 
 .funds-message {

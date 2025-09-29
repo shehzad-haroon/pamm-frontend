@@ -17,11 +17,7 @@ const Layout = () => {
     <div className="layout">
       <Sidebar />
       <div className="main-content">
-        <header className="header">
-          <button className="logout-btn" onClick={handleLogout}>
-            Logout
-          </button>
-        </header>
+        {/* Removed top logout button */}
         <main>
           <Outlet />
         </main>
