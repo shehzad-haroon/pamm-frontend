@@ -33,6 +33,7 @@ const TradingHistory = () => {
               <th>Symbol</th>
               <th>Type</th>
               <th>Lot</th>
+              <th>Price</th>
               <th>P/L</th>
             </tr>
           </thead>
@@ -43,6 +44,7 @@ const TradingHistory = () => {
                 <td>{trade.symbol}</td>
                 <td>{trade.type}</td>
                 <td>{trade.lot}</td>
+                <td>{trade.price !== undefined ? `$${Number(trade.price).toFixed(2)}` : '-'}</td>
                 <td className={trade.profitLoss >= 0 ? 'profit' : 'loss'}>
                   ${trade.profitLoss.toFixed(2)}
                 </td>

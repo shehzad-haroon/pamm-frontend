@@ -22,7 +22,11 @@ const Transactions = () => {
       <table>
         <thead>
           <tr>
-            <th>User</th><th>Type</th><th>Amount</th><th>Status</th><th>Date</th>
+            <th>User</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Account Number</th>
+            <th>Date</th>
           </tr>
         </thead>
         <tbody>
@@ -31,7 +35,7 @@ const Transactions = () => {
               <td>{tx.userId?.name}</td>
               <td>{tx.type}</td>
               <td>{tx.amount}</td>
-              <td>{tx.status}</td>
+              <td>{tx.accountNumber || '-'}</td>
               <td>{new Date(tx.date).toLocaleString()}</td>
             </tr>
           ))}

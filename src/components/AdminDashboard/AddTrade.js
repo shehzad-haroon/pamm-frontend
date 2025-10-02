@@ -3,7 +3,16 @@ import axios from 'axios';
 import API_URL from '../../api';
 
 const AddTrade = () => {
-  const [form, setForm] = useState({ email: '', symbol: '', type: '', lot: '', profitLoss: '', balance: '' });
+  const [form, setForm] = useState({ 
+    email: '', 
+    symbol: '', 
+    type: '', 
+    lot: '', 
+    price: '',
+    profitLoss: '', 
+    balance: '',
+    date: new Date().toISOString().split('T')[0]  // Default to today
+  });
   const [message, setMessage] = useState('');
 
   const handleChange = e => setForm({ ...form, [e.target.name]: e.target.value });
@@ -12,7 +21,11 @@ const AddTrade = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-  await axios.post(`${API_URL}/api/admin/trading-history`, form, {
+      const formData = {
+        ...form,
+        date: new Date(form.date).toISOString()
+      };
+      await axios.post(`${API_URL}/api/admin/trading-history`, formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage('Trade added!');
@@ -27,8 +40,10 @@ const AddTrade = () => {
       <input name="symbol" placeholder="Symbol" onChange={handleChange} required />
       <input name="type" placeholder="Type (buy/sell)" onChange={handleChange} required />
       <input name="lot" placeholder="Lot" onChange={handleChange} required />
+      <input name="price" placeholder="Price" onChange={handleChange} required />
       <input name="profitLoss" placeholder="P/L" onChange={handleChange} required />
       <input name="balance" placeholder="Balance" onChange={handleChange} required />
+      <input name="date" type="date" value={form.date} onChange={handleChange} required />
       <button type="submit">Add Trade</button>
       {message && <div>{message}</div>}
     </form>

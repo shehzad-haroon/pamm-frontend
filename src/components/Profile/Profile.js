@@ -32,7 +32,7 @@ const Profile = () => {
   <div><strong>Account ID:</strong> {profile.accountId || profile._id}</div>
         <div><strong>Joined:</strong> {
           (() => {
-            const dateStr = profile.joined || profile.joinDate || profile.createdAt || profile.updatedAt;
+            const dateStr = profile.joinDate;
             if (!dateStr) return 'N/A';
             const date = new Date(dateStr);
             return !isNaN(date.getTime()) ? date.toLocaleDateString() : 'N/A';
