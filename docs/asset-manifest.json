@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pamm-frontend/static/css/main.a270757a.css",
+    "main.js": "/pamm-frontend/static/js/main.ef84c6cf.js",
+    "static/js/453.670e15c7.chunk.js": "/pamm-frontend/static/js/453.670e15c7.chunk.js",
+    "index.html": "/pamm-frontend/index.html",
+    "main.a270757a.css.map": "/pamm-frontend/static/css/main.a270757a.css.map",
+    "main.ef84c6cf.js.map": "/pamm-frontend/static/js/main.ef84c6cf.js.map",
+    "453.670e15c7.chunk.js.map": "/pamm-frontend/static/js/453.670e15c7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a270757a.css",
+    "static/js/main.ef84c6cf.js"
+  ]
+}
