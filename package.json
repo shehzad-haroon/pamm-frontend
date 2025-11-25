@@ -1,5 +1,6 @@
 {
   "name": "frontend",
+  "homepage": "https://shehzad-haroon.github.io/pamm-frontend"
   "version": "0.1.0",
   "private": true,
   "dependencies": {
